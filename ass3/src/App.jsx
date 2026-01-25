@@ -62,7 +62,7 @@ function App() {
 
         <input
           className="search"
-          placeholder="مثال: 1 ramzan"
+          placeholder="رمضان 2026 — کراچی"
           value={input}
           onChange={handleSearch}
         />

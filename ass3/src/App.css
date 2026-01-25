@@ -33,15 +33,18 @@ body {
 
 /* input */
 .search {
-  width: 100%;
+  width: 100%; /* ya chhota chahoge to 80% */
+  text-align: center; /* text center */
   padding: 12px;
-  margin-top: 12px;
+  margin: 12px auto; /* horizontally center */
+  display: block;
   border-radius: 10px;
   border: 1px solid #ddd;
   font-size: 15px;
   outline: none;
   transition: 0.3s;
 }
+
 
 .search:focus {
   border-color: #1f7a4d;
