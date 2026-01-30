@@ -76,9 +76,17 @@ function App() {
             <p><b>Iftar:</b> {found.iftar}</p>
           </div>
         )}
+        <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+        <button className="theme-btn" onClick={toggleTheme}>🌙</button>
+
+
       </div>
     </div>
+    
   );
+}
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
 }
 
 

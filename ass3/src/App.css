@@ -1,10 +1,28 @@
+:root {
+  --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --card-bg: #ffffff;
+  --text: #1f7a4d;
+  --input-bg: #ffffff;
+  --result-bg: #f6fff9;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --bg: linear-gradient(135deg, #020617, #020617);
+  --card-bg: #111827;
+  --text: #4ade80;
+  --input-bg: #020617;
+  --result-bg: #020617;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: var(--bg);
+  transition: 0.3s;
 }
 
-/* center layout */
+/* center */
 .container {
   min-height: 100vh;
   display: flex;
@@ -12,9 +30,10 @@ body {
   align-items: center;
 }
 
-/* main card */
+/* card */
 .card {
-  background: #ffffff;
+  position: relative;
+  background: var(--card-bg);
   width: 340px;
   padding: 22px;
   border-radius: 16px;
@@ -23,82 +42,59 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
-/* heading */
 .card h2 {
-  margin: 0 0 12px;
-  color: #1f7a4d;
-  font-size: 22px;
-  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: var(--text);
 }
 
 /* input */
 .search {
-  width: 85%;          
+  width: 85%;
+  margin: 12px auto;
   display: block;
-  margin: 12px auto;  
-  text-align: center;
   padding: 12px;
+  text-align: center;
   border-radius: 10px;
   border: 1px solid #ddd;
-  font-size: 15px;
-  outline: none;
-  transition: 0.3s;
+  background: var(--input-bg);
+  color: var(--text);
 }
-
-
 
 .search:focus {
-  border-color: #1f7a4d;
-  box-shadow: 0 0 0 3px rgba(31, 122, 77, 0.2);
+  outline: none;
+  border-color: var(--text);
 }
 
-/* result box */
+/* result */
 .result {
   margin-top: 18px;
   padding: 14px;
-  background: #f6fff9;
+  background: var(--result-bg);
   border-radius: 12px;
-  border-left: 5px solid #1f7a4d;
+  border-left: 5px solid var(--text);
   text-align: left;
-  animation: slideUp 0.5s ease;
-}
-
-.result p {
-  margin: 6px 0;
-  font-size: 15px;
-  color: #333;
 }
 
 .result b {
-  color: #1f7a4d;
+  color: var(--text);
 }
 
-/* animations */
+/* theme button */
+.theme-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: var(--input-bg);
+  border-radius: 50%;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* mobile friendly */
-@media (max-width: 400px) {
-  .card {
-    width: 90%;
-  }
-}
