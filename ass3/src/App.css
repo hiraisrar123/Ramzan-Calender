@@ -33,17 +33,18 @@ body {
 
 /* input */
 .search {
-  width: 100%; /* ya chhota chahoge to 80% */
-  text-align: center; /* text center */
-  padding: 12px;
-  margin: 12px auto; /* horizontally center */
+  width: 85%;          /* 🔑 yahan 100% hata diya */
   display: block;
+  margin: 12px auto;   /* 🔑 auto se center */
+  text-align: center;
+  padding: 12px;
   border-radius: 10px;
   border: 1px solid #ddd;
   font-size: 15px;
   outline: none;
   transition: 0.3s;
 }
+
 
 
 .search:focus {
