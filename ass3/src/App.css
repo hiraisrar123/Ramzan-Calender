@@ -1,19 +1,28 @@
 :root {
-  --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --bg: linear-gradient(135deg, #f5f7fa, #e4ecf5);
   --card-bg: #ffffff;
-  --text: #1f7a4d;
-  --input-bg: #ffffff;
-  --result-bg: #f6fff9;
+
+  --text: #14532d;        /* deep elegant green */
+  --input-bg: #f9fafb;
+  --result-bg: #ecfdf5;
+
+  --border: #bbf7d0;
 }
 
-/* Dark Theme */
+
+
 .dark-theme {
-  --bg: linear-gradient(135deg, #020617, #020617);
-  --card-bg: #111827;
-  --text: #4ade80;
+  --bg: linear-gradient(135deg, #020617, #0f172a);
+  --card-bg: #0b1220;
+
+  --text: #5eead4;        /* classy mint */
   --input-bg: #020617;
   --result-bg: #020617;
+
+  --border: #0f766e;
 }
+
+
 
 body {
   margin: 0;
